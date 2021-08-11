@@ -14,14 +14,15 @@ public class Selen {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		System.setProperty("WebDriver.Chrome.driver","C:\\Users\\ARUNKUMAR\\esclipse new\\First\\Driver\\chromedriver.exe");
 		 WebDriver driver= new ChromeDriver();
-		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.get("http://blueballtechnologies.com/index.php");
 		driver.manage().window().maximize();
 		
 	WebElement s = driver.findElement(By.id("countries"));
 	
 	
-	
+	System.out.println("tedxt");
 Select	g=new Select(s);
+
 List<WebElement> options = g.getOptions();
 for(int i=0;i<options.size();i++) {
 	String text = options.get(i).getText();
